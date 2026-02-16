@@ -26,28 +26,34 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/demo_product_name"
-            android:textSize="60px"
+            android:textSize="30sp"
             android:layout_weight="1"/>
 
         <ImageButton
             android:id="@+id/removeButton"
+            android:minWidth="48.dp"
+            android:minHeight="48.dp"
+            android:contentDescription="@string/cas_1_bouton_de_suppression_du_panier"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_remove"
-            />
+
+            android:src="@drawable/ic_remove" />
 
         <TextView
             android:id="@+id/quantityText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="0"
-            android:textSize="60px"
             android:layout_margin="20dp"
-            android:textColor="@color/gray400"/>
+            android:accessibilityLiveRegion="polite"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            tools:text="0" />
 
         <ImageButton
             android:id="@+id/addButton"
-
+            android:minWidth="48.dp"
+            android:minHeight="48.dp"
+            android:contentDescription="@string/cas_1_bouton_d_ajout_au_panier"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_add"
