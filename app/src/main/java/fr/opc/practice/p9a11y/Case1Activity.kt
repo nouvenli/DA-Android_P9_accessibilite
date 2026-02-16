@@ -14,21 +14,35 @@ class Case1Activity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         var quantity = 0
+        updateQuantityText(quantity)
 
         binding.quantityText.text = "$quantity"
         binding.addButton.setOnClickListener {
             quantity++
-            binding.quantityText.text = "$quantity"
+            updateQuantityText(quantity)
+
         }
 
         binding.removeButton.setOnClickListener {
             if (quantity > 0) {
                 quantity--
-                binding.quantityText.text = "$quantity"
+                updateQuantityText(quantity)
             } else {
-                Toast.makeText(this, getString(R.string.impossible_d_avoir_une_quantit_n_gative), Toast.LENGTH_SHORT)
+                Toast.makeText(
+                    this,
+                    getString(R.string.impossible_d_avoir_une_quantit_n_gative),
+                    Toast.LENGTH_SHORT
+                )
                     .show()
             }
         }
     }
+
+    private fun updateQuantityText(quantity: Int) {
+        binding.quantityText.text = "$quantity"
+        binding.quantityText.contentDescription =  getString(R.string.cas_1_lire_quantité, quantity)
+    }
 }
+
+
+
