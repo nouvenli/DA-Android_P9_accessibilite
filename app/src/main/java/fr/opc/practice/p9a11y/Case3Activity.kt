@@ -8,6 +8,13 @@ import androidx.core.widget.doOnTextChanged
 import fr.opc.practice.p9a11y.databinding.ActivityCase3Binding
 
 
+/**
+ * Activity demonstrates handling form validation
+ * and error reporting with a focus on accessibility.
+ *
+ * This activity validates a pseudonym input field, displaying visual error messages
+ * and providing feedback to screen readers using accessibility announcements.
+ */
 class Case3Activity : AppCompatActivity() {
     private lateinit var binding: ActivityCase3Binding
 

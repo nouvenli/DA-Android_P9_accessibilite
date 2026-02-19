@@ -5,6 +5,12 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import fr.opc.practice.p9a11y.databinding.ActivityCase1Binding
 
+/**
+ * Activity demonstrating basic interactive controls.
+ * This activity allows users to increment or decrement a quantity and handles
+ * accessibility by updating the content description dynamically
+ * with argumented string
+ */
 class Case1Activity : AppCompatActivity() {
     private lateinit var binding: ActivityCase1Binding
 
