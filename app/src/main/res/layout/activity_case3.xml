@@ -3,39 +3,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Case3Activity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Case3Activity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cas_3"
+        android:id="@+id/screenTitle"
         style="@style/TextAppearance.MaterialComponents.Headline2"
-        android:layout_gravity="center_horizontal"
-        />
-
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pseudo"
-        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/cas_3_formulaire_de_connexion"
+        android:text="@string/cas_3" />
 
-        />
+    <TextView
+        android:id="@+id/pseudoText"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/pseudoEdit"
+        android:text="@string/cas_3_pseudo" />
 
     <EditText
         android:id="@+id/pseudoEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:autofillHints="username"
         android:inputType="text"
-        />
+        android:minHeight="48.dp" />
 
     <Button
         android:id="@+id/validateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/validate"
-        />
+        android:contentDescription="@string/cas_3_validate"
+        android:enabled="true"
+        android:minWidth="48.dp"
+        android:minHeight="48.dp"
+        android:text="@string/cas_3_validate" />
+
+    <TextView
+        android:id="@+id/errorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:importantForAccessibility="no"
+        android:textColor="@color/red400"
+        android:visibility="invisible" />
 
 </LinearLayout>
