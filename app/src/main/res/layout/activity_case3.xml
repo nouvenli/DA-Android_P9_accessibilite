@@ -7,6 +7,8 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/screenTitle"
+        android:contentDescription="@string/cas_3_formulaire_de_connexion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/cas_3"
@@ -14,17 +16,21 @@
         android:layout_gravity="center_horizontal"
         />
 
-
     <TextView
+        android:id="@+id/pseudoText"
+        android:importantForAccessibility="no"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pseudo"
+        android:text="@string/cas_3_pseudo"
         style="@style/TextAppearance.MaterialComponents.Body1"
 
         />
 
     <EditText
         android:id="@+id/pseudoEdit"
+        android:contentDescription="@string/cas_3_saisie_pseudonyme"
+        android:autofillHints="username"
+        android:minHeight="48.dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
@@ -32,10 +38,22 @@
 
     <Button
         android:id="@+id/validateButton"
+        android:contentDescription="@string/cas_3_validate"
+        android:minWidth="48.dp"
+        android:minHeight="48.dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/validate"
-        />
+        android:text="@string/cas_3_validate"
+        android:enabled="true"/>
+
+    <TextView
+        android:id="@+id/errorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/red400"
+        android:visibility="invisible"
+        android:importantForAccessibility="no"/>
 
 </LinearLayout>
