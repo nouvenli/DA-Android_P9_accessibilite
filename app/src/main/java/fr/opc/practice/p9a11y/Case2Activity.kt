@@ -79,7 +79,7 @@ class Case2Activity : AppCompatActivity() {
      * and clic is simulate
      */
     private fun updateFavouriteAccessibilityAction() {
-        val label = if (isFavourite) getString(R.string.cas_supprimer_des_favoris)
+        val label = if (isFavourite) getString(R.string.cas_2_supprimer_des_favoris)
         else getString(R.string.cd_ajouter_aux_favoris)
 
 
@@ -108,7 +108,7 @@ class Case2Activity : AppCompatActivity() {
         if (isFavourite) {
             binding.favouriteButton.setImageResource(R.drawable.ic_favourite_on)
             binding.favouriteButton.contentDescription =
-                getString(R.string.cas_supprimer_des_favoris)
+                getString(R.string.cas_2_supprimer_des_favoris)
         } else {
             binding.favouriteButton.setImageResource(R.drawable.ic_favourite_off)
             binding.favouriteButton.contentDescription = getString(R.string.cd_ajouter_aux_favoris)

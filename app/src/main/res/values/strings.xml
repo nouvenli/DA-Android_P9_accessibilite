@@ -15,7 +15,7 @@
     <string name="cas_2">Cas 2 :</string>
     <string name="cas_2_carte_de_suggestion_de_recettes">Cas 2 : Carte de suggestion de recettes</string>
     <string name="cd_ajouter_aux_favoris">Ajouter aux favoris</string>
-    <string name="cas_supprimer_des_favoris">Supprimer des favoris</string>
+    <string name="cas_2_supprimer_des_favoris">Supprimer des favoris</string>
     <string name="ajouter">Ajouter au panier</string>
     <string name="demo_cookie_text">Cookies au chocolat</string>
     <string name="recette_ajout_au_panier">Recette ajoutée au panier</string>
