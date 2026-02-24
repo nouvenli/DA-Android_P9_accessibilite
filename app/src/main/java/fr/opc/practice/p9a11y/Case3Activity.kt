@@ -42,13 +42,11 @@ class Case3Activity : AppCompatActivity() {
         binding.pseudoEdit.doOnTextChanged { text, _, _, _ ->
             val textLength = text?.length ?: 0
             binding.errorText.visibility = View.INVISIBLE
-            if (textLength < 3) {
                 binding.pseudoEdit.backgroundTintList = if (textLength > 2) {
                     ColorStateList.valueOf(resources.getColor(R.color.green400, theme))
                 } else {
                     ColorStateList.valueOf(resources.getColor(R.color.red400, theme))
                 }
-            }
 
         }
     }

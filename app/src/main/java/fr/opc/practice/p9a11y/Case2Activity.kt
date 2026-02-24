@@ -66,11 +66,20 @@ class Case2Activity : AppCompatActivity() {
             binding.recipeCard,
             getString(R.string.ajouter)
         ) { _, _ ->
-            binding.addRecipeToBasket.performClick()
+            addNewRecipe()
             true
         }
 
         updateFavouriteAccessibilityAction()
+    }
+
+    private fun addNewRecipe() {
+        //TODO add recipe
+    }
+
+    private fun toggleFavourite(){
+        isFavourite = !isFavourite
+        setFavouriteButtonIcon(isFavourite)
     }
 
     /**
@@ -91,7 +100,7 @@ class Case2Activity : AppCompatActivity() {
             ),
             label,
         ) { _, _ ->
-            binding.favouriteButton.performClick()
+            toggleFavourite()
             true
         }
     }
